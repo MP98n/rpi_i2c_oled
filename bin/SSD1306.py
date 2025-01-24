@@ -79,6 +79,7 @@ class SSD1306Base(object):
         # Handle hardware I2C
         self._log.debug('Using hardware I2C with platform I2C provider.')
         self._bus = smbus.SMBus(busnum)
+        time.sleep(1)
 
     def _initialize(self):
         raise NotImplementedError
